@@ -1,0 +1,8 @@
+# Multichat
+
+Multichat, using poll function.
+Server accepts max. 20 clients.
+
+Run:
+  ./server <port number>
+  ./client <host name> <port number>

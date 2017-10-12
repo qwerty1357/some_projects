@@ -6,7 +6,7 @@ Possible reading of metadata (title)
 ## What's supported:
 1. Commands 'PLAY', 'TITLE', 'PAUSE', 'QUIT'
 2. Loading and reading metadata from radio
-3. Saving music in file (in redirect mplayer output to file ;) or listening live music
+3. Saving music in file (if redirect mplayer output to file ;) or listening live music
 
 ## Run:
 In folder where is Makefile file (need to have mplayer installed)
