@@ -1,4 +1,4 @@
-#KMeans algorithm
+# KMeans algorithm
 
 KMeans algorithm implemented in C with MPI.
 
