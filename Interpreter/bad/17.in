@@ -1,0 +1,14 @@
+Program jakis;
+bool log;
+function void g1 (int & d) {
+	function void g2 (int & d) {
+		function void g3 (int & d) {
+			function void g4 (int & d) {
+				function void g5 (int & d) {
+					--log;
+				}
+			}
+		}
+	}
+}
+.

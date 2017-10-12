@@ -1,0 +1,13 @@
+Program jakis;
+int c;
+function void g (int d) {
+    if (d < 10) {
+        print d;
+        d++;
+        g(d);
+    }
+}
+c := 0;
+g(c);
+print 1111111111;
+.

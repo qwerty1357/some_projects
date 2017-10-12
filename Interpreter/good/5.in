@@ -1,0 +1,19 @@
+Program jakis;
+int x;
+int a;
+int i;
+i := 33;
+print i;
+for i := 2 to 10 {
+  print i;
+}
+print 0;
+print i;
+i := 33;
+print i;
+for i := 10 downto 2 {
+  print i;
+}
+print 0;
+print i;
+.

@@ -1,0 +1,15 @@
+Program jakis;
+int c;
+function int g () {
+	function int f () {
+	    c := 42;
+		print c;
+		return 1;
+	}
+	f();
+    print 4242;
+	return 2;
+}
+c := 404;
+g();
+.

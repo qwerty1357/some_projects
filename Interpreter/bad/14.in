@@ -1,0 +1,4 @@
+Program jakis;
+int c;
+c := 2 / 0;
+.

@@ -1,0 +1,84 @@
+comment "//" ;
+comment "/*" "*/" ;
+
+
+Prog. Program ::= "Program " Ident ";" Instructions "." ;
+
+
+separator nonempty Ident "," ;
+separator Decl "" ;
+separator Stmt "" ;
+
+
+Instr. Instructions ::= [Decl] [Stmt] ;
+
+
+DVar.      Decl ::= Type Ident ";" ;
+DValFunc.  Decl ::= "function" Type Ident "(" [ArgsDecl] ")" "{" Instructions Return "}" ;
+DVoidFunc. Decl ::= "function" "void" Ident "(" [ArgsDecl] ")" "{" Instructions "}" ;
+
+
+separator ArgsDecl "," ;
+ADecl. ArgsDecl ::= Type Ident ;
+ARef.  ArgsDecl ::= Type "&" Ident;
+
+separator Arguments "," ;
+Args. Arguments ::= Exp ;
+
+
+Ret.      Return ::= "return" Exp ";" ;
+
+
+SExp.     Stmt ::= Exp ";" ;
+SAssign.  Stmt ::= Ident ":=" Exp ";" ;
+SAdd.     Stmt ::= Ident "+=" Exp ";" ;
+SSub.     Stmt ::= Ident "-=" Exp ";" ;
+SMul.     Stmt ::= Ident "*=" Exp ";" ;
+SDiv.     Stmt ::= Ident "/=" Exp ";" ;
+SIf.      Stmt ::= "if" "(" Exp ")" "{" [Stmt] "}" ;
+SIfE.     Stmt ::= "if" "(" Exp ")" "{" [Stmt] "}" "else" "{" [Stmt] "}" ;
+SWhile.   Stmt ::= "while" "(" Exp ")" "{" [Stmt] "}" ;
+SFor.     Stmt ::= "for" Ident ":=" Exp "to" Exp "{" [Stmt] "}" ;
+SRFor.    Stmt ::= "for" Ident ":=" Exp "downto" Exp "{" [Stmt] "}" ;
+SPrint.   Stmt ::= "print" Exp ";" ;
+
+
+ETer.     Exp  ::= Exp1 "?" Exp1 ":" Exp2 ;
+EOr.      Exp1 ::= Exp1 "||" Exp2;
+EAnd.     Exp2 ::= Exp2 "&&" Exp3;
+EEq.      Exp3 ::= Exp3 "==" Exp4;
+ENeq.     Exp3 ::= Exp3 "!=" Exp4;
+ELt.      Exp4 ::= Exp4 "<" Exp5;
+EGt.      Exp4 ::= Exp4 ">" Exp5;
+ELe.      Exp4 ::= Exp4 "<=" Exp5;
+EGe.      Exp4 ::= Exp4 ">=" Exp5;
+EAdd.     Exp5 ::= Exp5 "+" Exp6;
+ESub.     Exp5 ::= Exp5 "-" Exp6;
+EMul.     Exp6 ::= Exp6 "*" Exp7;
+EDiv.     Exp6 ::= Exp6 "/" Exp7;
+Eneg.     Exp7 ::= "!" Exp8;
+Emin.	  Exp7 ::= "-" Exp8;
+ECpp1.    Exp7 ::= Ident CppExp ;
+ECpp2.    Exp7 ::= CppExp Ident ;
+EVar.     Exp8 ::= Ident ;
+EInt.     Exp8 ::= Integer ;
+EBool.    Exp8 ::= Boolean ;
+ECall.    Exp8 ::= Ident "(" [Arguments] ")" ;
+
+
+coercions Exp 8;
+
+
+CInc.     CppExp ::= "++" ;
+CDec.     CppExp ::= "--" ;
+
+
+separator nonempty Type ",";
+
+
+BTrue.    Boolean ::= "true" ;
+BFalse.   Boolean ::= "false" ;
+
+
+TInt.     Type ::= "int";
+TBool.    Type ::= "bool";

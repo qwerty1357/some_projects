@@ -1,0 +1,9 @@
+Program jakis;
+int c;
+print c;
+c++;
+print (c);
+print (c++);
+print (c);
+print (++c);
+.

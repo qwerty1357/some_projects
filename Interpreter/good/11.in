@@ -1,0 +1,15 @@
+Program jakis;
+int c;
+function void g (int & d) {
+	d := 42; 
+}
+function void h (int & d) {
+	d := 127;
+	print d;
+	g(d);
+	print d;
+	d := 512;
+}
+h(c);
+print c;
+.

@@ -1,0 +1,13 @@
+Program jakis;
+int c;
+function void g (int d) {
+	int c;
+	c := 333;
+	print c;
+	if (d++ < 5) {
+		g(d);
+	}
+}
+g(c);
+print c;
+.

@@ -1,0 +1,24 @@
+Program jakis;
+int c;
+function void g1 (int & d) {
+	function void g2 (int & d) {
+		function void g3 (int & d) {
+			function void g4 (int & d) {
+				function void g5 (int & d) {
+					print ++d;
+				}
+				print ++d;
+				if (d != 5) {
+					g1(d);
+				}
+			}
+			g4(d);
+		}
+		g3(d);
+	}
+	g2(d);
+}
+c := 0;
+g1(c);
+print c;
+.

@@ -1,0 +1,13 @@
+Program jakis;
+function void g (int d) {
+	function void g (int d) {
+		function void g (int d) {
+			function void g (int d) {
+				function void g (int d) {
+					print c;
+				}
+			}
+		}
+	}
+}
+.

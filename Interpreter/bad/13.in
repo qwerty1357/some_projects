@@ -1,0 +1,11 @@
+Program jakis;
+int c;
+function void g1 (int d) {
+	function void g2 (int d) {
+		function void g3 (int d) {
+			print d;
+		}
+	}
+	g3(3); // Funkcja g1 nie zna funkcji g3
+}
+.

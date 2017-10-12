@@ -1,0 +1,8 @@
+Program jakis;
+int a;
+int b;
+b := 1;
+b := (a + b) - a / b;
+2 + 3;
+print b;
+.

@@ -1,0 +1,13 @@
+Program jakis;
+int c;
+function void g1 (int d) {
+	function void g2 (int d) {
+		g1(d);
+	}
+	print 1;
+	if (d < 5) {
+		g2(++d);
+	}
+}
+g1(c);
+.

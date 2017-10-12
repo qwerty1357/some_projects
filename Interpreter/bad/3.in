@@ -1,0 +1,6 @@
+Program jakis;
+int c;
+if (c) {
+	print 0;
+}
+.

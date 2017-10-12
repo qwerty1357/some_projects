@@ -1,0 +1,4 @@
+Program jakis;
+bool c;
+c := 1;
+.

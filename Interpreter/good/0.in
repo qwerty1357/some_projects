@@ -1,0 +1,14 @@
+Program jakis;
+int a;
+int c;
+print a;
+a++;
+print a;
+++a;
+print a;
+a += ++a;
+print a;
+c := 2;
+c := c > 17 ? 31 : 67;
+print c;
+.

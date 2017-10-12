@@ -1,0 +1,17 @@
+Program jakis;
+int x;
+print x;
+x += 2;
+print x;
+x *= 2;
+print x;
+x /= 2;
+print x;
+x -= -2;
+print x;
+x := 10;
+x *= (x + 2) / 2;
+print x;
+x *= -x + 2 / 2;
+print x;
+.

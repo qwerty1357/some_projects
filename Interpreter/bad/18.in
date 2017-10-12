@@ -1,0 +1,15 @@
+Program jakis;
+int c;
+function void g (int d, bool f) {
+	function void g2 (int d, bool f) {
+		c++;
+		print c;
+		c := !c;
+	}
+	c++;
+	print c;
+	c := !c;
+}
+g(2, true);
+print c;
+.

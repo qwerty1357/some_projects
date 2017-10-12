@@ -1,0 +1,5 @@
+Program jakis;
+int c;
+c := c > 0 ? 3 : true;
+print c;
+.

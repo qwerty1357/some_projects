@@ -1,0 +1,10 @@
+Program jakis;
+int c;
+function void g (int & d) {
+	int c;
+	c := 333;
+	print c;
+}
+g(c);
+print c;
+.

@@ -1,0 +1,6 @@
+Program jakis;
+bool b;
+b := true;
+print b;
+print (!b);
+.

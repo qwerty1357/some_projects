@@ -1,0 +1,9 @@
+Program jakis;
+int c;
+function int g (int d) {
+	d := 42; 
+	return 7;
+}
+g(c);
+print c;
+.
