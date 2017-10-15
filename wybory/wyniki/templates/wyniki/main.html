@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <title>Strona główna</title>
+        {% load staticfiles %}
+        <link rel="stylesheet" type="text/css" href="{% static 'wyniki/main.css' %}" />
+        <script type='text/javascript' src="{% static 'wyniki/main.js' %}" ></script>
+        <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+    </head>
+
+    <body onload="get_rodzaj_data();get_wojewodztwa_data();completeCandidates();">
+
+
+        <h1>WYNIKI WYBORÓW PREZYDENCKICH 2005</h1>
+
+
+        <!-- logowanie -->
+        {% if user.is_authenticated %}
+            <p class="login-txt" id='isAuthenticated'>Jesteś zalogowany jako {{ user.username }} <button onclick ="window.location.href='{% url 'logout' %}'" class="login-btn">wyloguj</button></p>
+        {% else %}
+            <div >
+                <form action="{% url 'login' %}" method="POST" id="login">
+                    {% csrf_token %}
+                    <p id="log-in">Login:<input class="input-login" type="text" name="username" placeholder="login" id='login-input'></p>
+                    <p  id="haslo-in">Hasło:<input class="input-login" type="password" name="password" placeholder="hasło" id='pass-input'></p>
+                    <button class="login-btn" id="logowanie-sie" onclick>zaloguj</button>
+                </form>
+            </div>
+        {% endif %}
+
+
+        <!-- Głowny progress-bar - całkowite wyniki -->
+        <div id='glowny-progress'>
+            <ul class="skill-list">
+                <li class="skill">
+                    <h3 class="main-h5" id='imie1'> Kandydat </h3>
+                    <h4 class="main-h6" id='imie2'> Kandydat </h4>
+                    <progress class="skill-1" max="100" id='prgb'></progress>
+                </li>
+            </ul>
+        </div>
+
+
+        <!-- okienko, w którym wyświetla się html z mapką -->
+        <p align="center" id='mapka'>
+            <iframe src="wyniki/mapa" name="targetframe" scrolling="no" frameborder="1" ></iframe>
+        </p>
+
+
+        <!-- wyniki dla poszczególych województw -->
+        <table id="wojew" align="center">
+            <thead>
+                <tr>
+                    <th>WOJEWODZTWO</th>
+                    <th>LICZBA GŁOSÓW</th>
+                    <th id='imie11'>KANDYDAT </th>
+                    <th>WYNIK W %</th>
+                    <th id="imie22">KANDYDAT </th>
+                </tr>
+            </thead>
+            <tbody id="wojewodztwo-body">
+            </tbody>
+        </table>
+
+
+        <!-- wyniki dla poszczególych rodzajów -->
+        <table id="rodzaj">
+            <thead>
+                <tr>
+                    <th>RODZAJ</th>
+                    <th>LICZBA GŁOSÓW</th>
+                    <th id='imie111'>KANDYDAT </th>
+                    <th>WYNIK W %</th>
+                    <th id='imie222'>KANDYDAT </th>
+                </tr>
+            </thead>
+            <tbody id="rodzaj-body">
+            </tbody>
+        </table>
+
+
+        <!-- okienko modalne -->
+        <div id="overlay">
+            <div id="modal_content">
+                <button class="close-btn" onclick='closeModal()'> X </button>
+
+                <p id="modalContent">Wyniki</p>
+
+                <table id="gmina">
+                    <thead>
+                        <tr>
+                            <th>GMINA</th>
+                            <th>LICZBA GŁOSÓW</th>
+                            <th id='imie1111'></th>
+                            <th>WYNIK W %</th>
+                            <th id='imie2222'></th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody id="gmina-body">
+                    </tbody>
+                </table>
+
+                <!-- wyniki dla poszczególnych rodzajów -->
+                <form method="POST"  id="my-form">
+                    {% csrf_token %}
+                </form>
+                <button class="login-btn" onclick='closeModal()' id='zamknij-modal'> zamknij </button>
+            </div>
+        </div>
+
+
+        <!-- część z wyborem liczby mieszkańców dla gmin, dla których mamy wyświetlić wyniki -->
+        <div>
+            <p id="log-in">
+                Wyniki w gminach rozmiaru od <input class="input-oddo" type="text" id="od"> do <input class="input-oddo" type="text" id="do"> mieszkańców.
+                <button class="modal-btn" onclick="openModal('oddo', 'nic');" id='pokaz-oddo'>pokaż</button>
+            </p>
+        </div>
+
+
+    </body>
+</html>

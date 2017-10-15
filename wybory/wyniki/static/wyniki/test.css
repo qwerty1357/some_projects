@@ -1,0 +1,24 @@
+h1 {
+    color: red;
+    font-size: 30px;
+}
+
+.b {
+    background-image: url("bgr-img.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+a {
+    color: green;
+}
+
+
+.pl4 {
+    color: green;
+}
+
+
+p {
+    color: red;
+}

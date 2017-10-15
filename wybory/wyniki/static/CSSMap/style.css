@@ -1,0 +1,10 @@
+body {
+    background-image: url("bgr2-img.png");
+    background-position: auto;
+    background-repeat: repeat;
+    background-size: cover;
+}
+
+p {
+    text-transform: uppercase;
+}

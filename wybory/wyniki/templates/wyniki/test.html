@@ -1,0 +1,178 @@
+<html>
+    <head>
+        {% load staticfiles %}
+        <link rel="stylesheet" media="screen,projection" href="{% static 'CSSMap/cssmap-poland.css' %}" />
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+        <script src="http://cssmapsplugin.com/4/jquery.cssmap.js"></script>
+        <script>$(function($) { $("#map-poland").cssMap({size:810,tooltips:"floating"}); }); </script>
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        <link href="{% static 'CSSMap/style.css' %}" rel="stylesheet">
+    </head>
+    <body>
+        <div id="map-poland">
+            <ul class="poland">
+                <li class="pl1"><a href="#dolnoslaskie">
+                    <p>dolnośląskie</p>
+                    {% for w in woj %}
+                        {% if w.wojewodztwo|stringformat:"s" == "dolnoslaskie" %}
+                            <p style="color:green">{{k1.nazwa}} {{w.pr1}}%</p>
+                            <p style="color:red">{{k2.nazwa}} {{w.pr2}}%</p>
+                        {% endif %}
+                    {% endfor %}
+                </a></li>
+
+                <li class="pl2"><a href="#kujawsko-pomorskie">
+                    <p>kujawsko-pomorskie</p>
+                    {% for w in woj %}
+                        {% if w.wojewodztwo|stringformat:"s" == "kujawsko-pomorskie" %}
+                            <p style="color:green">{{k1.nazwa}} {{w.pr1}}%</p>
+                            <p style="color:red">{{k2.nazwa}} {{w.pr2}}%</p>
+                        {% endif %}
+                    {% endfor %}
+                </a></li>
+
+                <li class="pl3"><a href="#lubelskie">
+                    <p>lubelskie</p>
+                    {% for w in woj %}
+                        {% if w.wojewodztwo|stringformat:"s" == "lubelskie" %}
+                            <p style="color:green">{{k1.nazwa}} {{w.pr1}}%</p>
+                            <p style="color:red">{{k2.nazwa}} {{w.pr2}}%</p>
+                        {% endif %}
+                    {% endfor %}
+                </a></li>
+
+                <li class="pl4"><a href="#lubuskie">
+                    <p>lubuskie</p>
+                    {% for w in woj %}
+                        {% if w.wojewodztwo|stringformat:"s" == "lubuskie" %}
+                            <p style="color:green">{{k1.nazwa}} {{w.pr1}}%</p>
+                            <p style="color:red">{{k2.nazwa}} {{w.pr2}}%</p>
+                        {% endif %}
+                    {% endfor %}
+                </a></li>
+
+                <li class="pl5"><a href="#lodzkie">
+                    <p>łódzkie</p>
+                    {% for w in woj %}
+                        {% if w.wojewodztwo|stringformat:"s" == "lodzkie" %}
+                            <p style="color:green">{{k1.nazwa}} {{w.pr1}}%</p>
+                            <p style="color:red">{{k2.nazwa}} {{w.pr2}}%</p>
+                        {% endif %}
+                    {% endfor %}
+                </a></li>
+
+                <li class="pl6"><a href="#malopolskie">
+                    <p>małopolskie</p>
+                    {% for w in woj %}
+                        {% if w.wojewodztwo|stringformat:"s" == "malopolskie" %}
+                            <p style="color:green">{{k1.nazwa}} {{w.pr1}}%</p>
+                            <p style="color:red">{{k2.nazwa}} {{w.pr2}}%</p>
+                        {% endif %}
+                    {% endfor %}
+                </a></li>
+
+                <li class="pl7"><a href="#mazowieckie">
+                    <p>mazowieckie</p>
+                    {% for w in woj %}
+                        {% if w.wojewodztwo|stringformat:"s" == "mazowieckie" %}
+                            <p style="color:green">{{k1.nazwa}} {{w.pr1}}%</p>
+                            <p style="color:red">{{k2.nazwa}} {{w.pr2}}%</p>
+                        {% endif %}
+                    {% endfor %}
+                </a></li>
+
+                <li class="pl8"><a href="#opolskie">
+                    <p>opolskie</p>
+                    {% for w in woj %}
+                        {% if w.wojewodztwo|stringformat:"s" == "opolskie" %}
+                            <p style="color:green">{{k1.nazwa}} {{w.pr1}}%</p>
+                            <p style="color:red">{{k2.nazwa}} {{w.pr2}}%</p>
+                        {% endif %}
+                    {% endfor %}
+                </a></li>
+
+                <li class="pl9"><a href="#podkarpackie">
+                    <p>podkarpackie</p>
+                    {% for w in woj %}
+                        {% if w.wojewodztwo|stringformat:"s" == "podkarpackie" %}
+                            <p style="color:green">{{k1.nazwa}} {{w.pr1}}%</p>
+                            <p style="color:red">{{k2.nazwa}} {{w.pr2}}%</p>
+                        {% endif %}
+                    {% endfor %}
+                </a></li>
+
+                <li class="pl10"><a href="#podlaskie">
+                    <p>podlaskie</p>
+                    {% for w in woj %}
+                        {% if w.wojewodztwo|stringformat:"s" == "podlaskie" %}
+                            <p style="color:green">{{k1.nazwa}} {{w.pr1}}%</p>
+                            <p style="color:red">{{k2.nazwa}} {{w.pr2}}%</p>
+                        {% endif %}
+                    {% endfor %}
+                </a></li>
+
+                <li class="pl11"><a href="#pomorskie">
+                    <p>pomorskie</p>
+                    {% for w in woj %}
+                        {% if w.wojewodztwo|stringformat:"s" == "pomorskie" %}
+                            <p style="color:green">{{k1.nazwa}} {{w.pr1}}%</p>
+                            <p style="color:red">{{k2.nazwa}} {{w.pr2}}%</p>
+                        {% endif %}
+                    {% endfor %}
+                </a></li>
+
+                <li class="pl12"><a href="#slaskie">
+                    <p>ślaskie</p>
+                    {% for w in woj %}
+                        {% if w.wojewodztwo|stringformat:"s" == "slaskie" %}
+                            <p style="color:green">{{k1.nazwa}} {{w.pr1}}%</p>
+                            <p style="color:red">{{k2.nazwa}} {{w.pr2}}%</p>
+                        {% endif %}
+                    {% endfor %}
+                </a></li>
+
+                <li class="pl13"><a href="#swietokrzyskie">
+                    <p>świętokrzyskie</p>
+                    {% for w in woj %}
+                        {% if w.wojewodztwo|stringformat:"s" == "swietokrzyskie" %}
+                            <p style="color:green">{{k1.nazwa}} {{w.pr1}}%</p>
+                            <p style="color:red">{{k2.nazwa}} {{w.pr2}}%</p>
+                        {% endif %}
+                    {% endfor %}
+                </a></li>
+
+                <li class="pl14"><a href="#warminsko-mazurskie">
+                    <p>warmińsko-mazurskie</p>
+                    {% for w in woj %}
+                        {% if w.wojewodztwo|stringformat:"s" == "warminsko-mazurskie" %}
+                            <p style="color:green">{{k1.nazwa}} {{w.pr1}}%</p>
+                            <p style="color:red">{{k2.nazwa}} {{w.pr2}}%</p>
+                        {% endif %}
+                    {% endfor %}
+                </a></li>
+
+                <li class="pl15"><a href="#wielkopolskie">
+                    <p>wielkopolskie</p>
+                    {% for w in woj %}
+                        {% if w.wojewodztwo|stringformat:"s" == "wielkopolskie" %}
+                            <p style="color:green">{{k1.nazwa}} {{w.pr1}}%</p>
+                            <p style="color:red">{{k2.nazwa}} {{w.pr2}}%</p>
+                        {% endif %}
+                    {% endfor %}
+                </a></li>
+
+                <li class="pl16"><a href="#zachodniopomorskie">
+                    <p>zachodnio-pomorskie</p>
+                    {% for w in woj %}
+                        {% if w.wojewodztwo|stringformat:"s" == "zachodnio-pomorskie" %}
+                            <p style="color:green">{{k1.nazwa}} {{w.pr1}}%</p>
+                            <p style="color:red">{{k2.nazwa}} {{w.pr2}}%</p>
+                        {% endif %}
+                    {% endfor %}
+                </a></li>
+            </ul>
+        </div>
+    </body>
+</html>
