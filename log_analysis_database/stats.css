@@ -1,0 +1,55 @@
+.back_btn {
+    border-radius: 20px;
+    color: black;
+    border: white;
+    background-color: white;
+    height: 25px;
+    width: 130px;
+    font-size: 12px;
+    left: 20px;
+    top: 30px;
+    position: fixed;
+}
+
+.back_btn a {
+    text-decoration: none;
+    color: black;
+}
+
+h2 {
+    text-align: center;
+    color: white;
+    font-size: 40px;
+    text-shadow: 10px 10px 5px white;
+}
+
+body {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    background: url(logs.jpg);
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(logs.jpg);
+}
+
+th {
+    color: blue;
+}
+
+td {
+    padding: 20px;
+    width: 550px;
+    height: 70px;
+    margin: 10px;
+}
+
+tr {
+    padding: 20px;
+    margin: 10px;
+}
+
+table {
+    margin-top: 70px;
+}
+
+.log {
+    color: white;
+}

@@ -1,0 +1,246 @@
+.back_btn {
+    border-radius: 20px;
+    color: black;
+    border: white;
+    background-color: white;
+    height: 25px;
+    width: 130px;
+    font-size: 12px;
+    left: 20px;
+    top: 30px;
+    position: fixed;
+}
+
+.back_btn a {
+    text-decoration: none;
+    color: black;
+}
+
+h2 {
+  text-align: center;
+  color: white;
+  font-size: 40px;
+  text-shadow: 10px 10px 5px white;
+}
+
+body {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background: url(logs.jpg);
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(logs.jpg);
+}
+
+.log {
+  color: white;
+}
+
+.file {
+  color: blue;
+}
+
+.input {
+  color: blue;
+}
+
+.input_text {
+  border-radius: 10px;
+  text-align: center;
+  color: black;
+  border: white;
+}
+
+.input_text_modal {
+  border-radius: 10px;
+  text-align: center;
+  color: black;
+  border: black;
+  width: 100px;
+  border: black solid 1px;
+}
+
+.btn {
+  border-radius: 10px;
+  color: black;
+  border: white;
+  background-color: white;
+  margin-top: 2px;
+}
+
+.btn2 {
+  border-radius: 20px;
+  color: black;
+  border: white;
+  background-color: white;
+  margin-top: 2px;
+  height: 25px;
+  margin: 20px;
+  width: 130px;
+  font-size: 12px;
+}
+
+.btn3 {
+  color: white;
+  border: black;
+  background-color: black;
+  margin-top: 2px;
+  margin-bottom: 5px;
+  border-radius: 10px;
+}
+
+.files_list {
+  background-color: white;
+  border-radius: 20px;
+  width: 300px;
+  height: auto;
+  padding: 1px;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0.6;
+}
+
+.header_files {
+  color: blue;
+  font-size: 20px;
+}
+
+th {
+  color: blue;
+}
+
+td {
+      padding: 20px;
+      width: 8%;
+      height: auto;
+      word-break: break-all;
+}
+
+
+table {
+    margin-top: 70px;
+    table-layout: fixed;
+    width: 1400px;
+
+}
+
+.form_text {
+    color: white;
+}
+
+.err {
+    width: 30px;
+    height: 30px;
+}
+
+td.log_stat {
+    width: 300px;
+    color: white;
+    padding: 40px;
+}
+
+.head_stats {
+    color: blue;
+    font-size: 20px;
+}
+
+#modal_window {
+  height: auto;
+  width: 500px;
+  background-color: white;
+  display: none;
+  border-radius: 20px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transform: -webkit-translate(-50%, -50%);
+  transform: -ms-translate(-50%, -50%);
+  border: white solid 1px;
+
+}
+
+
+#modal_window_comp {
+  height: auto;
+  width: 500px;
+  background-color: white;
+  display: none;
+  border-radius: 20px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transform: -webkit-translate(-50%, -50%);
+  transform: -ms-translate(-50%, -50%);
+  border: white solid 1px;
+}
+
+
+#modal_window_stats {
+  height: auto;
+  width: 500px;
+  background-color: white;
+  display: none;
+  border-radius: 20px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transform: -webkit-translate(-50%, -50%);
+  transform: -ms-translate(-50%, -50%);
+  border: white solid 1px;
+}
+
+
+#modal_window_delete {
+  height: auto;
+  width: 500px;
+  background-color: white;
+  display: none;
+  border-radius: 20px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transform: -webkit-translate(-50%, -50%);
+  transform: -ms-translate(-50%, -50%);
+  border: white solid 1px;
+
+}
+
+#modal_window_users {
+  height: auto;
+  width: 300px;
+  background-color: white;
+  display: none;
+  border-radius: 20px;
+  border: white solid 1px;
+  padding: 10px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transform: -webkit-translate(-50%, -50%);
+  transform: -ms-translate(-50%, -50%);
+}
+
+#modal_window_files {
+  height: auto;
+  width: auto;
+  background-color: white;
+  display: none;
+  border-radius: 20px;
+  border: white solid 1px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transform: -webkit-translate(-50%, -50%);
+  transform: -ms-translate(-50%, -50%);
+}
+
+#file_upload {
+  padding: 10px;
+}
